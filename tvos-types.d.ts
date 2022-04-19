@@ -1,5 +1,5 @@
 import React from 'react';
-import { ViewProps, ScrollViewProps } from 'react-native';
+import 'react-native';
 
 declare module 'react-native' {
   interface ViewProps {
@@ -110,5 +110,9 @@ declare module 'react-native' {
     onBlur?(evt: HWKeyEvent): void;
   }
 
-  export class TVTextScrollView extends React.Component<TVTextScrollViewProps> {}
+  export class TVTextScrollView extends React.Component<TVTextScrollViewProps> { }
+  
+  export interface PressableStateCallbackType {
+    readonly focused: boolean;
+  }
 }
